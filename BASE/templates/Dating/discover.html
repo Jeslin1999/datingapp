@@ -48,13 +48,54 @@
 .btn{
     border-color: blueviolet;
 }
+
+.profile-icon {
+    display: inline-block;
+    text-align: center;
+    margin: 10px;
+}
+
+.rounded-circle {
+    border-radius: 50%;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    border: none;
+    outline: none;
+    cursor: pointer;
+}
+
+.large-btn {
+    width: 50px;
+    height: 50px;
+}
+
+.large-btn svg {
+    width: 24px;
+    height: 24px;
+}
+.view:hover{
+    background-color: blueviolet;
+}
 </style>
 <div class="container">
 <div class="discover-page mt-3">
-    <div class="d-flex justify-content-between align-items-center mb-3">
-        <div class="d-flex">
-            <button class="btn btn-outline-light"><i class="fas fa-search"></i></button>
-            <button class="btn btn-outline-light ml-2"><i class="fas fa-ellipsis-h"></i></button>
+    <div class="d-flex justify-content-around mb-2">
+        <div class="profile-icon">
+            <button class="rounded-circle large-btn">
+                <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-heart">
+                    <path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"></path>
+                </svg>
+            </button>
+            <p class="text-center">Likes</p>
+        </div>
+
+        <div class="profile-icon">
+            <button class="rounded-circle large-btn">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-users"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path><circle cx="9" cy="7" r="4"></circle>
+                    <path d="M23 21v-2a4 4 0 0 0-3-3.87"></path><path d="M16 3.13a4 4 0 0 1 0 7.75"></path></svg>
+            </button>
+            <p class="text-center">Connetions</p>
         </div>
     </div>
     <div class="d-flex justify-content-between align-items-center mb-3">
@@ -110,7 +151,37 @@
             <button class="btn btn-light m-1">Photography</button>
             <button class="btn btn-light m-1">Music</button>
             <button class="btn btn-light m-1">Writing</button>
+            <button class="btn btn-light m-1">Acting</button>
+            <button class="btn btn-light m-1">Art</button>
+            <button class="btn btn-light m-1">Chess</button>
+            <button class="btn btn-light m-1">Cooking</button>
+            <button class="btn btn-light m-1">Craft</button>
+            <button class="btn btn-light m-1">Learing</button>
+            <button class="btn btn-light m-1">Nature</button>
+            <button class="btn btn-light m-1">Nightlife</button>
+            <button class="btn btn-light m-1">Reading</button>
+            <button class="btn btn-light m-1">singing</button>
+            <button class="btn btn-light m-1">Sports</button>
+            <button class="btn btn-light m-1">Travel</button>
+            <button class="btn btn-light m-1">Tecnology</button>
+            <button class="btn btn-light m-1">video Games</button>
+            <button class="btn btn-light m-1">Walking</button>
+            <button class="btn btn-light m-1">Yoga</button>
+            <button class="btn btn-light m-1">Music Production</button>
+            <button class="btn btn-light m-1">Fitness</button>
+            <button class="btn btn-light m-1">Exercise</button>
+            <button class="btn btn-light m-1">Others</button>
+
+
+            
         </div>
+
+        <div class="mb-2 text-center d-flex justify-content-center mt-5">
+            
+            <a href="{% url 'Dating:matches' %}" class="btn btn-outline-primary rounded-pill  view">View Matches</a>
+           
+        </div>
+    
     </div>
 
     <div class="around-me">

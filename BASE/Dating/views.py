@@ -20,7 +20,25 @@ class GenderselectView(FormView):
         return super().form_valid(form)
 
 class Gridview(TemplateView):
+    template_name = 'Dating/gridview.html'
+
+class Educationview(TemplateView):
     template_name = 'Dating/education.html'
+
+class Locationview(TemplateView):
+    template_name = 'Dating/location.html'
+
+class Desiginationview(TemplateView):
+    template_name = 'Dating/pro.html'
+
+class Matchesview(TemplateView):
+    template_name = 'Dating/matchs.html'
+
+class Discoverview(TemplateView):
+    template_name = 'Dating/discover.html'
+    
+class Profileview(TemplateView):
+    template_name = 'Dating/viewedprofile.html'
 
 class Errorview(TemplateView):
     template_name = 'shared/error404.html'

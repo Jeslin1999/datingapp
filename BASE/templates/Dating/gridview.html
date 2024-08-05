@@ -2,7 +2,7 @@
 {% load static %}
 {% block content %}
 <style>
-  .profile-card {
+    .profile-card {
         border-radius: 15px;
         overflow: hidden;
         position: relative;
@@ -13,6 +13,7 @@
         width: 100%;
         height: 350px;
     }
+
     .profile-card .profile-info {
         position: absolute;
         bottom: 0;
@@ -23,7 +24,7 @@
         padding: 10px;
         text-align: left;
     }
-    
+
     .online-badge {
         position: absolute;
         top: 10px;
@@ -33,6 +34,7 @@
         padding: 5px;
         border-radius: 50%;
     }
+
     .btn-group-toggle .btn {
         border-radius: 0;
         border: 1px solid #007bff; /* Adjust as needed */
@@ -42,17 +44,21 @@
         background-color: #007bff; /* Adjust as needed */
         color: white;
     }
-
- 
 </style>
+
 <div class="container mt-5">
     <div class="d-flex justify-content-between align-items-center mb-3">
-        <a href="#"onclick="window.history.back();"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" 
-            class="feather feather-chevron-left text-dark"><polyline points="15 18 9 12 15 6"></polyline></svg></a><h1>BuddyPair</h1>
+        <a href="#" onclick="window.history.back();">
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-chevron-left text-dark">
+                <polyline points="15 18 9 12 15 6"></polyline>
+            </svg>
+        </a>
+        <h1>BuddyPair</h1>
         <div>
             <!-- Add your icons and navigation here -->
         </div>
     </div>
+
     <div class="d-flex justify-content-around mb-2">
         <!-- Add your story/profile icons here -->
         <div class="profile-icon">
@@ -80,13 +86,14 @@
             <p class="text-center">My Story</p>
         </div>
     </div>
-    <div class="btn-group btn-group-toggle mb-2 text-center" data-toggle="buttons">
-        <a href="" class="btn btn-outline-primary rounded-pill active" data-option="all">All</a>
-        <a href="" class="btn btn-outline-primary rounded-pill" data-option="location">Location</a>
-        <a href="" class="btn btn-outline-primary rounded-pill" data-option="designation">Designation</a>
-        <a href="" class="btn btn-outline-primary rounded-pill" data-option="qualification">Qualification</a>
+
+    <div class="btn-group btn-group-toggle mb-2 text-center">
+        <a href="#" class="btn btn-outline-primary rounded-pill active">All</a>
+        <a href="{% url 'Dating:location' %}" class="btn btn-outline-primary rounded-pill">Location</a>
+        <a href="{% url 'Dating:pro' %}" class="btn btn-outline-primary rounded-pill">Designation</a>
+        <a href="{% url 'Dating:education' %}" class="btn btn-outline-primary rounded-pill">Qualification</a>
     </div>
-    
+
     <div class="row">
         <div class="col-md-3 mb-2">
             <div class="profile-card">
@@ -150,20 +157,5 @@
         </div>
     </div>
 </div>
-<script>
-    document.addEventListener('DOMContentLoaded', function() {
-        const buttons = document.querySelectorAll('.btn-group-toggle .btn');
-        
-        buttons.forEach(a => {
-            a.addEventListener('click', (event) => {
-                event.preventDefault();
-                buttons.forEach(btn => btn.classList.remove('active'));
-                a.classList.add('active');
-                const selectedOption = a.getAttribute('data-option');
-                console.log(`Selected option: ${selectedOption}`);
-            });
-        });
-    });
-</script>
 
 {% endblock %}

@@ -17,7 +17,7 @@
         bottom: 0;
         left: 0;
         right: 0;
-        background: linear-gradient(to top, rgba(0, 0, 0, 0.8), transparent);
+        background: linear-gradient(to top, rgba(62, 10, 120, 0.8), transparent);
         color: white;
         padding: 10px;
         text-align: left;
@@ -40,6 +40,31 @@
         background-color: #007bff; /* Adjust as needed */
         color: white;
     }
+    .profile-icon {
+    display: inline-block;
+    text-align: center;
+    margin: 10px;
+}
+
+.rounded-circle {
+    border-radius: 50%;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    border: none;
+    outline: none;
+    cursor: pointer;
+}
+
+.large-btn {
+    width: 50px;
+    height: 50px;
+}
+
+.large-btn svg {
+    width: 24px;
+    height: 24px;
+}
 
  
 </style>
@@ -53,12 +78,20 @@
     </div>
     <div class="d-flex justify-content-around mb-2">
         <div class="profile-icon">
-            <img src="{% static 'images/2.jpeg' %}" alt="Profile 1" class="rounded-circle" width="60">
-            <p class="text-center">Likes 47</p>
+            <button class="rounded-circle large-btn">
+                <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-heart">
+                    <path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"></path>
+                </svg>
+            </button>
+            <p class="text-center">Likes</p>
         </div>
+
         <div class="profile-icon">
-            <img src="{% static 'images/1.jpeg' %}" alt="Profile 2" class="rounded-circle" width="60">
-            <p class="text-center">Connetion 47</p>
+            <button class="rounded-circle large-btn">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-users"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path><circle cx="9" cy="7" r="4"></circle>
+                    <path d="M23 21v-2a4 4 0 0 0-3-3.87"></path><path d="M16 3.13a4 4 0 0 1 0 7.75"></path></svg>
+            </button>
+            <p class="text-center">Connetions</p>
         </div>
     </div>
     <div>

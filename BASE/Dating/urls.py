@@ -5,10 +5,17 @@ app_name = 'Dating'
 urlpatterns = [
     path('index/',intex,name='index'),
     path('',GenderselectView.as_view(),name='selectgender'),
-    # path('login/',LoginView.as_view(),name='login'),
     path('gridview/',Gridview.as_view(),name='gridview'),
+    path('location/',Locationview.as_view(),name='location'),
+    path('education/',Educationview.as_view(),name='education'),
+    path('pro/',Desiginationview.as_view(),name='pro'),
+    path('matches/',Matchesview.as_view(),name='matches'),
+    path('discover/',Discoverview.as_view(),name='discover'),
+    path('viewed/',Profileview.as_view(),name='viewed'),
     path('errorview/',Errorview.as_view(),name='errorview'),
 
+
+    # path('login/',LoginView.as_view(),name='login'),
     # path('locationgridview/',LocationGridview.as_view(),name='locationgridview'),
     # path('educationgridview/',EducationGridview.as_view(),name='educationgridview'),
     # path('gallery/',GalleryView.as_view(),name='gallery'),
