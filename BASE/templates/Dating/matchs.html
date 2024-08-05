@@ -1,0 +1,135 @@
+{% extends 'shared/base.html' %}
+{% load static %}
+{% block content %}
+<style>
+    .profile-card {
+        border-radius: 15px;
+        overflow: hidden;
+        position: relative;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    }
+    .profile-card img {
+        width: 100%;
+        height: 350px;
+    }
+    .profile-card .profile-info {
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        background: linear-gradient(to top, rgba(0, 0, 0, 0.8), transparent);
+        color: white;
+        padding: 10px;
+        text-align: left;
+    }
+    .online-badge {
+        position: absolute;
+        top: 10px;
+        left: 10px;
+        background: green;
+        color: white;
+        padding: 5px;
+        border-radius: 50%;
+    }
+    .btn-group-toggle .btn {
+        border-radius: 0;
+        border: 1px solid #007bff; /* Adjust as needed */
+    }
+
+    .btn-group-toggle .btn.active {
+        background-color: #007bff; /* Adjust as needed */
+        color: white;
+    }
+
+ 
+</style>
+<div class="container mt-5">
+    <div class="d-flex justify-content-between align-items-center mb-3">
+        <a href="#"onclick="window.history.back();"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" 
+            class="feather feather-chevron-left text-dark"><polyline points="15 18 9 12 15 6"></polyline></svg></a><h1>Matches</h1>
+        <div>
+            <!-- Add your icons and navigation here -->
+        </div>
+    </div>
+    <div class="d-flex justify-content-around mb-2">
+        <!-- Add your story/profile icons here -->
+        <div class="profile-icon">
+            <img src="{% static 'images/2.jpeg' %}" alt="Profile 1" class="rounded-circle" width="60">
+            <p class="text-center">Likes</p>
+        </div>
+        <div class="profile-icon">
+            <img src="{% static 'images/1.jpeg' %}" alt="Profile 2" class="rounded-circle" width="60">
+            <p class="text-center">Connetion</p>
+        </div>
+        
+    </div>
+    <div>
+        <h3>Your Matches 47</h3>
+    </div>
+    
+    <div class="row">
+        <div class="col-md-3 mb-2">
+            <div class="profile-card">
+                <img src="{% static 'images/1.jpeg' %}" alt="Sithara Nair">
+                <div class="online-badge">Online</div>
+                <div class="profile-info">
+                    <h5>Sithara Nair</h5>
+                    <p>Developer, Hyderabad</p>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-3 mb-2">
+            <div class="profile-card">
+                <img src="{% static 'images/1.jpeg' %}" alt="Sithara Nair">
+                <div class="online-badge">Online</div>
+                <div class="profile-info">
+                    <h5>Sithara Nair</h5>
+                    <p>Developer, Hyderabad</p>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-3 mb-2">
+            <div class="profile-card">
+                <img src="{% static 'images/1.jpeg' %}" alt="Sithara Nair">
+                <div class="online-badge">Online</div>
+                <div class="profile-info">
+                    <h5>Sithara Nair</h5>
+                    <p>Developer, Hyderabad</p>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-3 mb-2">
+            <div class="profile-card">
+                <img src="{% static 'images/1.jpeg' %}" alt="Sithara Nair">
+                <div class="online-badge">Online</div>
+                <div class="profile-info">
+                    <h5>Sithara Nair</h5>
+                    <p>Developer, Hyderabad</p>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-3 mb-2">
+            <div class="profile-card">
+                <img src="{% static 'images/1.jpeg' %}" alt="Sithara Nair">
+                <div class="online-badge">Online</div>
+                <div class="profile-info">
+                    <h5>Sithara Nair</h5>
+                    <p>Designer, Hyderabad</p>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-3 mb-2">
+            <div class="profile-card">
+                <img src="{% static 'images/default-profile-pic.jpeg' %}" alt="Sithara Nair">
+                <div class="online-badge">Online</div>
+                <div class="profile-info">
+                    <h5>Sithara Nair</h5>
+                    <p>Manager, Hyderabad</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+{% endblock %}

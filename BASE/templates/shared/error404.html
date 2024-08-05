@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>404 Page</title>
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+
+    <style>
+        body, html {
+            height: 100%;
+            margin: 0;
+            background-color: #4B215F;
+            color: #fff;
+            font-family: 'Arial', sans-serif;
+        }
+        
+        .error-page {
+            display: none;
+        }
+        
+        #error-404.active,
+        #error-403.active {
+            display: block;
+        }
+        
+        h1 {
+            font-size: 120px;
+            margin-bottom: 10px;
+            color: #FFEB73;
+        }
+        
+        p {
+            font-size: 24px;
+            margin-bottom: 20px;
+        }
+        
+        .btn-outline-light {
+            color: #fff;
+            border-color: #fff;
+        }
+        
+        .btn-outline-light:hover {
+            background-color: #fff;
+            color: #4B215F;
+        }
+    </style>
+</head>
+<body>
+    <div class="container d-flex flex-column justify-content-center align-items-center vh-100">
+        <div id="error-404" class="error-page active text-center">
+            <h1>404</h1>
+            <p>Ooops...</p>
+            <p>We cannot find this page</p>
+            <a href="#" onclick="window.history.back();" class="btn btn-outline-light">Let's try something different</a>
+        </div>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.3/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>

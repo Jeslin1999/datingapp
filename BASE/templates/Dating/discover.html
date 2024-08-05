@@ -1,0 +1,123 @@
+{% extends 'shared/base.html' %}
+{% load static %}
+{% block content %}
+<style>
+.discover-page {
+    padding: 15px;
+}
+
+.profile-cards .card {
+    margin-bottom: 15px;
+    border: none;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.card-body {
+    text-align: center;
+}
+
+.card-body .badge {
+    display: inline-block;
+    margin-top: 5px;
+}
+
+.interests .btn {
+    border-radius: 50px;
+}
+
+.around-me {
+    text-align: center;
+}
+
+.map-placeholder {
+    position: relative;
+}
+
+.map-placeholder img {
+    border-radius: 10px;
+}
+
+.map-placeholder .btn {
+    position: absolute;
+    bottom: 15px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+.btn{
+    border-color: blueviolet;
+}
+</style>
+<div class="container">
+<div class="discover-page mt-3">
+    <div class="d-flex justify-content-between align-items-center mb-3">
+        <div class="d-flex">
+            <button class="btn btn-outline-light"><i class="fas fa-search"></i></button>
+            <button class="btn btn-outline-light ml-2"><i class="fas fa-ellipsis-h"></i></button>
+        </div>
+    </div>
+    <div class="d-flex justify-content-between align-items-center mb-3">
+        
+        <a href="#"onclick="window.history.back();"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" 
+            class="feather feather-chevron-left text-dark"><polyline points="15 18 9 12 15 6"></polyline></svg></a><h1>Discover</h1>
+        <div>
+            <!-- Add your icons and navigation here -->
+        </div>
+    </div>
+    <div class="profile-cards row">
+        <div class="col-3">
+            <div class="card">
+                <img src="{% static 'images/1.jpeg' %}" class="card-img-top" alt="Halima">
+                <div class="card-body">
+                    <h5 class="card-title">Halima, 19</h5>
+                    <p class="card-text">Berlin</p>
+                    <span class="badge badge-pill badge-primary">16 km away</span>
+                    <span class="badge badge-pill badge-danger">NEW</span>
+                </div>
+            </div>
+        </div>
+        <div class="col-3">
+            <div class="card">
+                <img src="{% static 'images/1.jpeg' %}" class="card-img-top" alt="Vanessa">
+                <div class="card-body">
+                    <h5 class="card-title">Vanessa, 18</h5>
+                    <p class="card-text">Munich</p>
+                    <span class="badge badge-pill badge-primary">4.8 km away</span>
+                    <span class="badge badge-pill badge-danger">NEW</span>
+                </div>
+            </div>
+        </div>
+        <div class="col-3">
+            <div class="card">
+                <img src="{% static 'images/2.jpeg' %}" class="card-img-top" alt="James">
+                <div class="card-body">
+                    <h5 class="card-title">James, 20</h5>
+                    <p class="card-text">Hanover</p>
+                    <span class="badge badge-pill badge-primary">2.2 km away</span>
+                    <span class="badge badge-pill badge-danger">NEW</span>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="interests my-4">
+        <h4>Interest</h4>
+        <div class="d-flex flex-wrap">
+            <button class="btn btn-light m-1">Football</button>
+            <button class="btn btn-light m-1">Nature</button>
+            <button class="btn btn-light m-1">Language</button>
+            <button class="btn btn-light m-1">Photography</button>
+            <button class="btn btn-light m-1">Music</button>
+            <button class="btn btn-light m-1">Writing</button>
+        </div>
+    </div>
+
+    <div class="around-me">
+        <h4>Around me</h4>
+        <p>People with <strong>Music</strong> interest around you</p>
+        
+    </div>
+</div>
+</div>
+{% endblock %}
