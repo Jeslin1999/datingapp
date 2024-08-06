@@ -22,24 +22,6 @@
         padding: 10px;
         text-align: left;
     }
-    .online-badge {
-        position: absolute;
-        top: 10px;
-        left: 10px;
-        background: green;
-        color: white;
-        padding: 5px;
-        border-radius: 50%;
-    }
-    .btn-group-toggle .btn {
-        border-radius: 0;
-        border: 1px solid #007bff; /* Adjust as needed */
-    }
-
-    .btn-group-toggle .btn.active {
-        background-color: #007bff; /* Adjust as needed */
-        color: white;
-    }
     .profile-icon {
     display: inline-block;
     text-align: center;
@@ -65,6 +47,7 @@
     width: 24px;
     height: 24px;
 }
+
 .online-badge {
         position: absolute;
         top: 10px;
@@ -74,6 +57,27 @@
         padding: 5px;
         border-radius: 50%;
     }
+
+.upgrade-popup {
+    position: fixed;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    background: white;
+    border-radius: 10px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    text-align: center;
+}
+
+.upgrade-popup .popup-content {
+    padding: 20px;
+}
+
+.upgrade-popup .btn {
+    margin-top: 10px;
+}
+
  
 </style>
 <div class="container mt-5">
@@ -114,6 +118,7 @@
                 <div class="profile-info">
                     <h5>Sithara Nair</h5>
                     <p>Developer, Hyderabad</p>
+                    <p class="card-text">2.5 km away</p>
                 </div>
             </div>
         </div>
@@ -124,26 +129,7 @@
                 <div class="profile-info">
                     <h5>Sithara Nair</h5>
                     <p>Developer, Hyderabad</p>
-                </div>
-            </div>
-        </div>
-        <div class="col-md-3 mb-2">
-            <div class="profile-card">
-                <img src="{% static 'images/1.jpeg' %}" alt="Sithara Nair">
-                <div class="online-badge">80% Match</div>
-                <div class="profile-info">
-                    <h5>Sithara Nair</h5>
-                    <p>Developer, Hyderabad</p>
-                </div>
-            </div>
-        </div>
-        <div class="col-md-3 mb-2">
-            <div class="profile-card">
-                <img src="{% static 'images/1.jpeg' %}" alt="Sithara Nair">
-                <div class="online-badge">80% Match</div>
-                <div class="profile-info">
-                    <h5>Sithara Nair</h5>
-                    <p>Developer, Hyderabad</p>
+                    <p class="card-text">2.5 km away</p>
                 </div>
             </div>
         </div>
@@ -154,6 +140,7 @@
                 <div class="profile-info">
                     <h5>Sithara Nair</h5>
                     <p>Designer, Hyderabad</p>
+                    <p class="card-text">2.5 km away</p>
                 </div>
             </div>
         </div>
@@ -164,8 +151,16 @@
                 <div class="profile-info">
                     <h5>Sithara Nair</h5>
                     <p>Manager, Hyderabad</p>
+                    <p class="card-text">2.5 km away</p>
                 </div>
             </div>
+        </div>
+    </div>
+
+    <div class="upgrade-popup">
+        <div class="popup-content">
+            <p>Upgrade to view more</p>
+            <button class="btn btn-primary">Upgrade</button>
         </div>
     </div>
 </div>

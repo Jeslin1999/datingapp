@@ -40,5 +40,11 @@ class Discoverview(TemplateView):
 class Profileview(TemplateView):
     template_name = 'Dating/viewedprofile.html'
 
+class Notificationview(TemplateView):
+    template_name = 'Dating/notification.html'
+
+class Upgradeview(TemplateView):
+    template_name = 'Dating/upgrade.html'
+
 class Errorview(TemplateView):
     template_name = 'shared/error404.html'

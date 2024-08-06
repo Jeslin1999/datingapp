@@ -13,6 +13,9 @@ urlpatterns = [
     path('discover/',Discoverview.as_view(),name='discover'),
     path('viewed/',Profileview.as_view(),name='viewed'),
     path('errorview/',Errorview.as_view(),name='errorview'),
+    path('notificationview/',Notificationview.as_view(),name='notificationview'),
+    path('upgradeview/',Upgradeview.as_view(),name='upgradeview'),
+
 
 
     # path('login/',LoginView.as_view(),name='login'),

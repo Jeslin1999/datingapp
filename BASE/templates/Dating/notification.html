@@ -1,0 +1,91 @@
+{% block content %}
+<style>
+    body {
+    background-color: #d1e7dd;
+}
+
+.container {
+    position: relative;
+}
+
+.notification-card {
+    background: rgba(128, 0, 128, 0.8);
+    color: white;
+    margin-bottom: 20px;
+    border: none;
+    border-radius: 10px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.notification-card .card-header {
+    background: none;
+    border-bottom: none;
+    font-size: 1.2rem;
+}
+
+.notification-card .card-body {
+    padding: 1rem;
+}
+
+.notification-card .close {
+    color: white;
+    font-size: 1.5rem;
+}
+
+ 
+</style>
+<div class="container mt-5">
+    <div class="notification-card">
+        <div class="card-header d-flex justify-content-between align-items-center">
+            <span>News</span>
+            <button type="button" class="close" aria-label="Close">&times;</button>
+        </div>
+        <div class="card-body">
+            <h5 class="card-title">News Title</h5>
+            <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Turpis vitae ultricies in sed. Feugiat metus amet sit sed volutpat enim orci. Cras vel vitae.</p>
+            <small class="text-muted">Today 10:30PM</small>
+        </div>
+    </div>
+
+    <div class="notification-card">
+        <div class="card-header d-flex justify-content-between align-items-center">
+            <span>Successfully Message</span>
+            <button type="button" class="close" aria-label="Close">&times;</button>
+        </div>
+        <div class="card-body">
+            <small class="text-muted">Today 10:30PM</small>
+        </div>
+    </div>
+
+    <div class="notification-card">
+        <div class="card-header d-flex justify-content-between align-items-center">
+            <span>Alert Message</span>
+            <button type="button" class="close" aria-label="Close">&times;</button>
+        </div>
+        <div class="card-body">
+            <small class="text-muted">Today 10:30PM</small>
+        </div>
+    </div>
+
+    <div class="notification-card">
+        <div class="card-header d-flex justify-content-between align-items-center">
+            <span>Error Message</span>
+            <button type="button" class="close" aria-label="Close">&times;</button>
+        </div>
+        <div class="card-body">
+            <small class="text-muted">Today 10:30PM</small>
+        </div>
+    </div>
+</div>
+
+<script>
+    document.addEventListener('DOMContentLoaded', function() {
+    document.querySelectorAll('.notification-card .close').forEach(button => {
+        button.addEventListener('click', function() {
+            this.closest('.notification-card').style.display = 'none';
+        });
+    });
+});
+
+</script>
+{% endblock content %}
